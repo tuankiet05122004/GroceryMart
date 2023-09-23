@@ -7,10 +7,11 @@
     // display: none;
 
     &__inner {
+        --inner-padding: 30px;
         position: relative;
 
-        max-height: min(582px, 100vh - 158px);
-        padding: 30px;
+        max-height: var(--inner-max-height);
+        padding: var(--inner-padding);
 
         border-radius: 20px;
         background: var(--dropdown-bg-color);
@@ -28,18 +29,24 @@
 }
 
 .top-menu {
-    height: 100%;
+    position: relative;
 
     &__main {
-        width: 292px;
-        height: 100%;
+        --main-width: 292px;
+        width: var(--main-width);
+        max-height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
         border-right: 1px solid var(--top-menu-border-color);
+        overflow-y: auto;
     }
 }
 
 .menu-column {
     display: flex;
     gap: 14px;
+
+    + .menu-column {
+        margin-top: var(--inner-padding);
+    }
 
     &__icon {
         position: relative;
@@ -67,6 +74,7 @@
         width: 24px;
         height: 24px;
         object-fit: cover;
+        filter: var(--top-menu-category);
     }
 
     &__heading {
@@ -80,6 +88,12 @@
         margin-top: 19px;
     }
 
+    &__item {
+        &:hover .sub-menu {
+            display: grid;
+        }
+    }
+
     &__link {
         display: block;
         padding: 7px 0;
@@ -91,4 +105,16 @@
             font-weight: 500;
         }
     }
+}
+
+.sub-menu {
+    position: absolute;
+    inset: 0 0 0 var(--main-width);
+    margin-left: var(--inner-padding);
+
+    display: none;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--inner-padding);
+
+    overflow: auto;
 }
