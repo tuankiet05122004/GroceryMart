@@ -50,11 +50,16 @@
         }
     }
 
+    @include abstracts.breakpoint(sm) {
+        inset: 0 20% 0 0;
+    }
     &__list {
         @extend %flexItemsCenter;
         @include abstracts.breakpoint(lg) {
             flex-direction: column;
             align-items: flex-start;
+            height: calc(100% - 124px);
+            overflow-y: auto;
         }
     }
 

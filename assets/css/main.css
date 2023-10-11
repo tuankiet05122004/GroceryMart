@@ -1316,9 +1316,10 @@ html.dark {
 }
 
 html {
+  --white-color: #fff;
   --text-color: #1a162e;
-  --icon-color: brightness(0) saturate(100%) invert(8%) sepia(10%)
-      saturate(4042%) hue-rotate(212deg) brightness(90%) contrast(95%);
+  --icon-color: brightness(0) saturate(100%) invert(8%) sepia(10%) saturate(4042%) hue-rotate(212deg) brightness(90%)
+      contrast(95%);
   --body-bg: #f6f6f6;
   --header-bg-color: #eee;
   --top-act-group-bg-color: #fff;
@@ -1389,10 +1390,17 @@ html {
     visibility: visible;
   }
 }
+@media (max-width: 575.98px) {
+  .navbar {
+    inset: 0 20% 0 0;
+  }
+}
 @media (max-width: 991.98px) {
   .navbar__list {
     flex-direction: column;
     align-items: flex-start;
+    height: calc(100% - 124px);
+    overflow-y: auto;
   }
 }
 .navbar__item:hover .dropdown {
@@ -1519,10 +1527,18 @@ html {
 
 .dropdown {
   position: absolute;
+  z-index: 1;
   left: 0;
   width: min(1240px, 100%);
   padding-top: 54px;
   display: none;
+}
+@media (max-width: 991.98px) {
+  .dropdown {
+    display: block;
+    position: initial;
+    padding-top: 0;
+  }
 }
 .dropdown__inner {
   --inner-padding: 30px;
@@ -1541,16 +1557,39 @@ html {
   translate: -50%;
   filter: var(--dropdown-arrow-color);
 }
+@media (max-width: 991.98px) {
+  .dropdown__inner {
+    padding: 0 15px;
+    border-radius: 0;
+    background-color: transparent;
+    box-shadow: none;
+  }
+  .dropdown__inner::before {
+    content: none;
+  }
+}
 
 .top-menu {
   position: relative;
 }
+@media (max-width: 991.98px) {
+  .top-menu {
+    position: initial;
+  }
+}
 .top-menu__main {
   --main-width: 292px;
   width: var(--main-width);
-  max-height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
+  height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
   border-right: 1px solid var(--top-menu-border-color);
   overflow-y: auto;
+}
+@media (max-width: 991.98px) {
+  .top-menu__main {
+    width: 100%;
+    height: auto;
+    border-right: none;
+  }
 }
 
 .menu-column {
@@ -1569,6 +1608,11 @@ html {
 @media (max-width: 1199.98px) {
   .menu-column__icon {
     display: none;
+  }
+}
+@media (max-width: 991.98px) {
+  .menu-column__icon {
+    display: block;
   }
 }
 .menu-column__content {
@@ -1594,8 +1638,18 @@ html {
   font-weight: 500;
   line-height: 150%;
 }
+@media (max-width: 991.98px) {
+  .menu-column__heading {
+    margin-bottom: 26px;
+  }
+}
 .menu-column__list {
   margin-top: 19px;
+}
+@media (max-width: 991.98px) {
+  .menu-column__list {
+    margin-top: 0;
+  }
 }
 .menu-column__item--active .sub-menu {
   display: grid;
@@ -1620,6 +1674,13 @@ html {
   gap: var(--inner-padding);
   overflow: auto;
 }
+@media (max-width: 991.98px) {
+  .sub-menu {
+    position: initial;
+    grid-template-columns: 1fr;
+    padding-left: 0;
+  }
+}
 .sub-menu--not-main {
   display: grid;
   position: initial;
@@ -1627,6 +1688,67 @@ html {
   padding-left: 0;
   max-height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
   grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 991.98px) {
+  .sub-menu--not-main {
+    display: block;
+    max-height: none;
+  }
+}
+
+.slideshow {
+  margin: 40px 0;
+  position: relative;
+}
+.slideshow__inner {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.slideshow_item {
+  width: 100%;
+  flex-shrink: 0;
+}
+.slideshow__img {
+  width: 100%;
+}
+.slideshow__page {
+  position: absolute;
+  bottom: 70px;
+  left: 70px;
+  display: flex;
+  align-items: center;
+  column-gap: 22px;
+}
+.slideshow__num {
+  color: var(--white-color);
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
+.slideshow__slider {
+  position: relative;
+  background: var(--white-color);
+  width: 176px;
+  height: 0.4rem;
+  flex-shrink: 0;
+}
+.slideshow__slider::before, .slideshow__slider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  border: 4px solid var(--white-color);
+  border-radius: 50%;
+}
+.slideshow__slider::before {
+  left: 0;
+  translate: -72% -50%;
+}
+.slideshow__slider::after {
+  right: 0;
+  translate: 75% -50%;
 }
 
 /*# sourceMappingURL=main.css.map */
