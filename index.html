@@ -104,6 +104,7 @@
                         </button>
 
                         <div class="filter">
+                            <img src="./assets/icons/arrow-up.png" alt="" class="filter__arrow" />
                             <h3 class="filter__heading">Filter</h3>
                             <form action="" class="filter__form">
                                 <div class="filter__row filter__content">
@@ -138,10 +139,68 @@
                                     </div>
                                     <div class="filter__separate"></div>
                                     <!-- col 2 -->
-                                    <div class="filter__col"></div>
+                                    <div class="filter__col">
+                                        <label for="" class="filter__form-label">Size/Weight</label>
+                                        <div class="filter__form-group">
+                                            <div class="filter__form-select-wrap">
+                                                <div class="filter__form-select" style="--width: 130px">
+                                                    500g
+                                                    <img
+                                                        src="./assets/icons/arrow-down-select.svg"
+                                                        alt=""
+                                                        class="filter__form-select-icon icon"
+                                                    />
+                                                </div>
+
+                                                <div class="filter__form-select">
+                                                    Gram
+                                                    <img
+                                                        src="./assets/icons/arrow-down-select.svg"
+                                                        alt=""
+                                                        class="filter__form-select-icon icon"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="filter__form-group">
+                                            <div class="filter__form-tags">
+                                                <buttton class="filter__form-tag"> Small </buttton>
+                                                <buttton class="filter__form-tag"> Medium </buttton>
+                                                <buttton class="filter__form-tag"> Large </buttton>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="filter__separate"></div>
                                     <!-- col 3 -->
-                                    <div class="filter__col"></div>
+                                    <div class="filter__col">
+                                        <label class="filter__form-label">Brand</label>
+                                        <div class="filter__form-group">
+                                            <div class="filter__form-text-input">
+                                                <input
+                                                    type="text"
+                                                    class="filter__form-input"
+                                                    placeholder="Search brand name"
+                                                />
+                                                <img
+                                                    src="./assets/icons/search.svg"
+                                                    alt=""
+                                                    class="filter__form-input-icon icon"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="filter__form-group">
+                                            <div class="filter__form-tags">
+                                                <button class="filter__form-tag">Lavazza</button>
+                                                <button class="filter__form-tag">Nescafe</button>
+                                                <button class="filter__form-tag">Starbucks</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter__row filter__footer">
+                                    <button class="btn btn--text filter__cancel">Cancel</button>
+                                    <button class="btn btn--primary filter__search">Show Result</button>
                                 </div>
                             </form>
                         </div>

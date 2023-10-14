@@ -37,3 +37,48 @@
         margin-top: 8px;
     }
 }
+
+// buttons
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 46px;
+    padding: 0 20px;
+    border-radius: 6px;
+    background: #f8f8fb;
+    font-size: 1.8rem;
+    font-weight: 500;
+    user-select: none;
+
+    &--text {
+        background-color: transparent;
+        color: #9e9da8;
+    }
+    &--primary {
+        background-color: #ffb700;
+    }
+
+    &--outline {
+        border: 1px solid #d2d1d6;
+    }
+
+    &--rounded {
+        border-radius: 99px;
+    }
+
+    &--disabled,
+    &[disabled] {
+        user-select: none;
+        opacity: 0.5;
+    }
+
+    & + & {
+        margin-left: 20px;
+    }
+
+    &:hover {
+        opacity: 0.9;
+    }
+}
