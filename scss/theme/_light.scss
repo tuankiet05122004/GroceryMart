@@ -45,4 +45,9 @@ html {
     --fitler-form-tag-bg: #f8f8f8;
     --filter-arrow: brightness(0) saturate(100%) invert(99%) sepia(76%) saturate(0%) hue-rotate(195deg) brightness(105%)
         contrast(101%);
+
+    // footer
+    --footer-bg: var(--header-bg-color);
+    // --footer-text-color: #9e9da6;
+    --footer-text-color: #1a162e;
 }

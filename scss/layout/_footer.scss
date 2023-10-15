@@ -1,0 +1,147 @@
+@use "../abstracts";
+
+.footer {
+    margin-top: 50px;
+    padding: 50px 0;
+    background-color: var(--footer-bg);
+    &__row {
+        display: grid;
+        grid-template-columns: 2fr 1.2fr 1fr 1fr 1.5fr;
+        gap: 60px;
+
+        @include abstracts.screen(lg) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    &__logo {
+        margin-left: 0;
+    }
+    &__help-text,
+    &__desc {
+        margin-top: 30px;
+        line-height: 1.5;
+    }
+
+    &__form {
+        padding: 16px 0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        @include abstracts.screen(xl) {
+            flex-direction: column;
+            align-items: normal;
+        }
+
+        @include abstracts.screen(lg) {
+            flex-direction: row;
+        }
+    }
+
+    &__input {
+        padding: 10px;
+        border-radius: 6px;
+
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 146.667%;
+        border: 2px solid #d2d1d6;
+    }
+
+    &__heading {
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 1.8rem;
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    &__link {
+        display: inline-block;
+        padding: 8px 0;
+        &:hover {
+            color: #0071dc;
+        }
+    }
+
+    &__text {
+        padding: 8px 0;
+        color: var(--footer-text-color);
+    }
+    &__label {
+        display: block;
+        font-weight: 500;
+        margin-top: 10px;
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 50px;
+
+        @include abstracts.screen(md) {
+            flex-direction: column-reverse;
+            gap: 40px;
+        }
+    }
+    &__copyright {
+        color: var(--footer-text-color);
+        text-align: center;
+    }
+
+    &__socials {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__social-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        border-radius: 5px;
+        background-color: #0071dc;
+        filter: grayscale(50%);
+        transition: transform, filter;
+        transition-duration: 0.2s;
+
+        &--facebook {
+            background: #4863a9;
+        }
+
+        &--youtube {
+            background: #f00;
+        }
+
+        &--tiktok {
+            background: #000;
+        }
+
+        &--twitter {
+            background: #4999e6;
+        }
+
+        &--linkedin {
+            background: #2f71ab;
+        }
+
+        &:hover {
+            transform: translateY(-5px);
+
+            filter: grayscale(0);
+        }
+    }
+
+    &__social-icon {
+        width: 12px;
+        filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(248deg) brightness(102%)
+            contrast(100%);
+    }
+}
