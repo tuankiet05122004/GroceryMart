@@ -1881,7 +1881,6 @@ html {
   background-color: var(--filter-form-bg);
   box-shadow: 0px 40px 90px var(--filter-form-shadow);
   transition: opacity, visibility 0.2s;
-  overflow: hidden;
 }
 @media (max-width: 575.98px) {
   .filter {
