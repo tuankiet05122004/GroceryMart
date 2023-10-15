@@ -165,6 +165,7 @@ button {
 
 a,
 button,
+img,
 input,
 textarea,
 select {
@@ -1323,6 +1324,11 @@ html.dark {
   --filter-color: #ffffff;
   --product-card-bg-color: #171c28;
   --product-card-shadow: rgba(0, 0, 0, 0.2);
+  --filter-form-bg: #292e39;
+  --filter-form-shadow: rgba(0, 0, 0, 0.4);
+  --fitler-form-tag-bg: #171c28;
+  --filter-arrow: brightness(0) saturate(100%) invert(16%) sepia(8%) saturate(1458%) hue-rotate(184deg)
+      brightness(94%) contrast(92%);
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -1353,6 +1359,8 @@ html {
   --filter-form-bg: #fff;
   --filter-form-shadow: rgba(200, 200, 200, 0.4);
   --fitler-form-tag-bg: #f8f8f8;
+  --filter-arrow: brightness(0) saturate(100%) invert(99%) sepia(76%) saturate(0%) hue-rotate(195deg) brightness(105%)
+      contrast(101%);
 }
 @media (max-width: 991.98px) {
   html {
@@ -1945,6 +1953,7 @@ html {
   color: #9e9da8;
 }
 .btn--primary {
+  color: #1a162e;
   background-color: #ffb700;
 }
 .btn--outline {
@@ -2018,17 +2027,30 @@ html {
 
 .filter {
   border-radius: 20px;
-  padding: 30px;
+  padding: 30px 0;
   position: absolute;
   right: 0;
-  top: 50px;
+  top: 55px;
   background-color: var(--filter-form-bg);
   box-shadow: 0px 40px 90px var(--filter-form-shadow);
+  transition: opacity, visibility 0.2s;
+  overflow: hidden;
+}
+@media (max-width: 575.98px) {
+  .filter {
+    width: 87vw;
+  }
+}
+.filter.hide {
+  opacity: 0;
+  visibility: hidden;
 }
 .filter__arrow {
   position: absolute;
   top: -10px;
   right: 10px;
+  z-index: -1;
+  filter: var(--filter-arrow);
 }
 .filter__row {
   display: flex;
@@ -2098,11 +2120,17 @@ html {
   height: 36px;
   padding: 0 12px;
 }
+@media (max-width: 1199.98px) {
+  .filter__form-text-input {
+    width: 100%;
+  }
+}
 .filter__form-input {
   width: 100%;
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 146.667%;
+  background-color: transparent;
 }
 .filter__form-select-wrap {
   display: flex;
@@ -2123,6 +2151,11 @@ html {
   line-height: 142.857%;
   cursor: pointer;
 }
+@media (max-width: 1199.98px) {
+  .filter__form-select {
+    flex: 1;
+  }
+}
 .filter__form-select + .filter__form-select {
   border-left: 1px solid #d2d1d6;
 }
@@ -2130,6 +2163,11 @@ html {
   display: flex;
   align-items: center;
   gap: 20px;
+}
+@media (max-width: 575.98px) {
+  .filter__form-tags {
+    gap: 10px;
+  }
 }
 .filter__form-tag {
   background-color: var(--fitler-form-tag-bg);
@@ -2150,14 +2188,35 @@ html {
   margin: 0 30px;
   background-color: #eeeeee;
 }
+@media (max-width: 1199.98px) {
+  .filter__separate {
+    width: 100%;
+    height: 1px;
+    margin: 30px 0;
+  }
+}
 .filter__footer {
   display: flex;
   justify-content: flex-end;
   margin-top: 30px;
+  background-color: var(--filter-form-bg);
+}
+@media (max-width: 1199.98px) {
+  .filter__footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 10px;
+  }
 }
 .filter__search, .filter__cancel {
   padding: 10px;
   height: 38px;
+}
+@media (max-width: 1199.98px) {
+  .filter__search, .filter__cancel {
+    flex: 1;
+  }
 }
 .filter__cancel {
   font-size: 1.5rem;
@@ -2166,6 +2225,27 @@ html {
 .filter__search {
   font-size: 1.4rem;
   font-weight: 500;
+}
+.filter__content, .filter__heading, .filter__footer {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.filter__content {
+  max-height: calc(100vh - 350px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+@media (max-width: 1199.98px) {
+  .filter__content {
+    flex-direction: column;
+    padding-bottom: 30px;
+  }
+}
+@media (max-width: 575.98px) {
+  .filter__content {
+    max-height: 100vh;
+    overscroll-behavior: initial;
+  }
 }
 
 .home__container {
