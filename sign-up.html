@@ -6,23 +6,9 @@
         <title>Sign up | Grocery Mart</title>
 
         <!-- Favicon -->
-        <link
-            rel="apple-touch-icon"
-            sizes="76x76"
-            href="./assets/favicon/apple-touch-icon.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="./assets/favicon/favicon-32x32.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="./assets/favicon/favicon-16x16.png"
-        />
+        <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
         <link rel="manifest" href="./assets/favicon/site.webmanifest" />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
@@ -37,19 +23,65 @@
         <script src="./assets/js/scripts.js"></script>
     </head>
     <body>
-        <!-- Header -->
-        <header id="header"></header>
-        <script>
-            load("#header", "./templates/header.html");
-        </script>
+        <main class="auth">
+            <!-- auth intro -->
+            <div class="auth__intro">
+                <img src="./assets/img/auth/auth-intro.png" alt="" class="auth__intro-img" />
+                <p class="auth__intro-text">
+                    The best of luxury brand values, high quality products, and innovative services
+                </p>
+            </div>
 
-        <!-- Main -->
-        <h1>Sign up page</h1>
+            <!-- auth content -->
+            <div class="auth__content">
+                <div class="auth__content-inner">
+                    <a href="./" class="logo">
+                        <img src="./assets/icons/logo.svg" alt="grocerymart" class="logo__img" />
+                        <h1 class="logo__title">grocerymart</h1>
+                    </a>
 
-        <!-- Footer -->
-        <footer id="footer"></footer>
-        <script>
-            load("#footer", "./templates/footer.html");
-        </script>
+                    <h1 class="auth__heading">Sign Up</h1>
+                    <p class="auth__desc">Let’s create your account and Shop like a pro and save money.</p>
+                    <form class="form auth__form">
+                        <div class="form__group">
+                            <div class="form__text-input">
+                                <input type="email" placeholder="Email" class="form__input" />
+                                <img src="./assets/icons/message.svg" alt="" class="form__icon" />
+                            </div>
+                        </div>
+                        <div class="form__group">
+                            <div class="form__text-input">
+                                <input type="password" placeholder="Password" class="form__input" />
+                                <img src="./assets/icons/lock.svg" alt="" class="form__icon" />
+                            </div>
+                        </div>
+
+                        <div class="form__group">
+                            <div class="form__text-input">
+                                <input type="password" placeholder="Confirm Password" class="form__input" />
+                                <img src="./assets/icons/lock.svg" alt="" class="form__icon" />
+                            </div>
+                        </div>
+                        <div class="form__group form__group-inline">
+                            <lebel class="form__checkbox">
+                                <input type="checkbox" class="form__check-input" />
+                                <span class="form__checkbox-label">Set as default card</span>
+                            </lebel>
+                        </div>
+                        <div class="form__group auth__btn-group">
+                            <button class="btn btn--primary auth__btn">Sign Up</button>
+                            <button class="btn btn--outline auth__btn">
+                                <img src="./assets/icons/lock.svg" alt="" class="btn__icon icon" />
+                                Sign in with Gmail
+                            </button>
+                        </div>
+                        <p class="auth__text">
+                            You have an account yet?
+                            <a href="./assets/icons/goolgle.svg" class="auth__link">Sign In</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </main>
     </body>
 </html>
