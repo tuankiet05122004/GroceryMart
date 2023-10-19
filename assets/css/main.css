@@ -1366,6 +1366,7 @@ html {
   --footer-bg: var(--header-bg-color);
   --footer-text-color: #1a162e;
   --auth-content-bg: #fff;
+  --auth-text-color: #9e9da8;
   --border-form-color: #d2d1d6;
   --placeholder-color: #d2d1d6;
   --checkbox-label-color: #9e9da8;
@@ -1817,7 +1818,7 @@ html {
   user-select: none;
   opacity: 0.5;
 }
-.btn + .btn {
+.btn + .btn:not(.btn--no-margin) {
   margin-left: 20px;
 }
 .btn:hover {
@@ -2103,6 +2104,7 @@ html {
 }
 .form__group {
   margin-top: 30px;
+  border-radius: 10px;
 }
 .form__group-inline {
   display: flex;
@@ -2294,6 +2296,11 @@ html {
   border-radius: 8px;
   cursor: pointer;
 }
+.top-act .top-act__btn-signup {
+  padding: 10px;
+  font-size: 1.6rem;
+  height: 35px;
+}
 
 .footer {
   margin-top: 50px;
@@ -2460,11 +2467,28 @@ html {
   min-height: 100vh;
 }
 .auth__intro {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 0 30px;
   gap: 50px;
+}
+.auth__intro-next, .auth__intro-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.auth__intro-logo {
+  top: 80px;
+}
+.auth__intro-next {
+  bottom: 50px;
+}
+.auth__intro-img {
+  max-width: 424px;
+  width: 100%;
 }
 .auth__intro-text {
   font-size: 1.8rem;
@@ -2479,6 +2503,17 @@ html {
 .auth__content {
   padding: 0 30px;
   background-color: var(--auth-content-bg);
+  overflow-y: auto;
+}
+@media (max-width: 767.98px) {
+  .auth__content {
+    position: fixed;
+    inset: 0;
+    transition: translate 0.3s;
+  }
+  .auth__content.hide {
+    transform: translateX(100%);
+  }
 }
 .auth__content-inner {
   display: flex;
@@ -2488,7 +2523,6 @@ html {
   padding: 50px 0;
   margin: 0 auto;
   width: min(460px, 100%);
-  height: 100vh;
 }
 .auth__heading {
   margin-top: 50px;
@@ -2508,10 +2542,24 @@ html {
   margin-top: 30px;
 }
 .auth__btn-group {
+  display: flex;
+  flex-direction: column;
   margin-top: 50px;
+  gap: 30px;
 }
 .auth__btn {
   width: 100%;
+}
+.auth__text {
+  margin-top: 108px;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 144.444%;
+  color: var(--auth-text-color);
+}
+.auth__link {
+  font-weight: 500;
+  color: #0071dc;
 }
 
 /*# sourceMappingURL=main.css.map */

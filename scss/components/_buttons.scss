@@ -75,7 +75,7 @@
         opacity: 0.5;
     }
 
-    & + & {
+    & + &:not(.btn--no-margin) {
         margin-left: 20px;
     }
 

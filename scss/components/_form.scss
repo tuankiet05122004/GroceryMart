@@ -2,6 +2,7 @@
     width: 100%;
     &__group {
         margin-top: 30px;
+        border-radius: 10px;
 
         &-inline {
             display: flex;
@@ -18,7 +19,6 @@
         font-size: 1.8rem;
         font-weight: 500;
         line-height: 144.444%;
-
         &::placeholder {
             color: var(--placeholder-color);
         }
