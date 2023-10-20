@@ -14,6 +14,7 @@
         justify-content: center;
         padding: 0 30px;
         gap: 50px;
+        background-color: var(--auth-intro-bg);
         &-next,
         &-logo {
             position: absolute;
@@ -40,6 +41,7 @@
             line-height: 144.444%;
             text-align: center;
             max-width: 412px;
+            color: var(--auth-intro-text-color);
 
             @include abstracts.screen(md) {
                 font-size: 1.5rem;

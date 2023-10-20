@@ -47,4 +47,15 @@ html.dark {
     // footer
     --footer-bg: var(--header-bg-color);
     --footer-text-color: #9e9da6;
+
+    // auth
+    --auth-intro-bg: #171c28;
+    --auth-content-bg: #292e39;
+    --auth-text-color: #b9babe;
+    --auth-intro-text-color: #b9babe;
+
+    // form
+    --border-form-color: #b9babe;
+    --placeholder-color: #b9babe;
+    --checkbox-label-color: #b9babe;
 }

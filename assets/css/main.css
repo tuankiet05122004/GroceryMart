@@ -1346,6 +1346,13 @@ html.dark {
       brightness(94%) contrast(92%);
   --footer-bg: var(--header-bg-color);
   --footer-text-color: #9e9da6;
+  --auth-intro-bg: #171c28;
+  --auth-content-bg: #292e39;
+  --auth-text-color: #b9babe;
+  --auth-intro-text-color: #b9babe;
+  --border-form-color: #b9babe;
+  --placeholder-color: #b9babe;
+  --checkbox-label-color: #b9babe;
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -1380,6 +1387,7 @@ html {
       contrast(101%);
   --footer-bg: var(--header-bg-color);
   --footer-text-color: #1a162e;
+  --auth-intro-bg: #fafafd;
   --auth-content-bg: #fff;
   --auth-text-color: #9e9da8;
   --border-form-color: #d2d1d6;
@@ -1395,6 +1403,11 @@ html {
 @media (max-width: 767.98px) {
   html {
     --cate-item-bg-color: #fff;
+  }
+}
+@media (max-width: 767.98px) {
+  html {
+    --auth-intro-bg: #fff;
   }
 }
 
@@ -1803,6 +1816,7 @@ html {
   background-color: #ffb700;
 }
 .btn--outline {
+  background-color: transparent;
   border: 1px solid #d2d1d6;
 }
 .btn--rounded {
@@ -2136,6 +2150,11 @@ html {
   line-height: 146.667%;
   color: var(--checkbox-label-color);
 }
+@media (max-width: 767.98px) {
+  .form__group {
+    margin-top: 20px;
+  }
+}
 .form__text-input {
   display: flex;
   align-items: center;
@@ -2368,10 +2387,12 @@ html {
   border-radius: 8px;
   cursor: pointer;
 }
-.top-act .top-act__btn-signup {
-  padding: 10px;
-  font-size: 1.6rem;
-  height: 35px;
+@media (max-width: 767.98px) {
+  .top-act .top-act__btn-signup {
+    padding: 10px;
+    font-size: 1.6rem;
+    height: 35px;
+  }
 }
 
 .footer {
@@ -2551,6 +2572,7 @@ html {
   justify-content: center;
   padding: 0 30px;
   gap: 50px;
+  background-color: var(--auth-intro-bg);
 }
 .auth__intro-next, .auth__intro-logo {
   position: absolute;
@@ -2573,6 +2595,7 @@ html {
   line-height: 144.444%;
   text-align: center;
   max-width: 412px;
+  color: var(--auth-intro-text-color);
 }
 @media (max-width: 767.98px) {
   .auth__intro-text {

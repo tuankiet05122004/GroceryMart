@@ -1,3 +1,4 @@
+@use "../abstracts";
 .form {
     width: 100%;
     &:has(:invalid) &__submit-btn {
@@ -46,6 +47,10 @@
             font-weight: 500;
             line-height: 146.667%;
             color: var(--checkbox-label-color);
+        }
+
+        @include abstracts.screen(md) {
+            margin-top: 20px;
         }
     }
     &__text-input {
