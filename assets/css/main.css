@@ -2538,7 +2538,7 @@ html {
   display: flex;
   min-height: 100vh;
 }
-@supports (--webkit-touch-callout) {
+@supports (--webkit-touch-callout: none) {
   .auth {
     min-height: --webkit-fill-available;
   }
