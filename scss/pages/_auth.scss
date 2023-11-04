@@ -136,8 +136,12 @@
     }
 
     &__link {
+        margin-left: auto;
         font-size: inherit;
         font-weight: 500;
         color: #0071dc;
+    }
+    &__message {
+        margin-top: 30px;
     }
 }

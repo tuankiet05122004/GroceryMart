@@ -1,0 +1,11 @@
+.product {
+    &-page {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--product-detail-bg);
+    }
+
+    &-container {
+        margin-top: 30px;
+    }
+}
