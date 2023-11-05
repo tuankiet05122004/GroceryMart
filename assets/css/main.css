@@ -1397,6 +1397,7 @@ html {
   --placeholder-color: #d2d1d6;
   --checkbox-label-color: #9e9da8;
   --product-detail-bg: #fff;
+  --product-info-bg: #f6f6f6;
   --breadcrumbs-bg: #f6f6f6;
   --breadcrumbs-shadown: rgba(237, 237, 246, 0.2);
 }
@@ -2802,6 +2803,39 @@ html {
   opacity: 1;
   border-color: #ffb700;
   pointer-events: none;
+}
+.product-prop {
+  display: flex;
+  gap: 20px;
+}
+.product-prop__icon {
+  align-self: flex-start;
+}
+.product-prop__title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
+.product-prop__desc {
+  margin-top: 4px;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 142.857%;
+}
+.product-props {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.product-info {
+  padding: 60px;
+  background-color: var(--product-info-bg);
+}
+.product-info__heading {
+  font-size: 2.6rem;
+  font-weight: 500;
+  line-height: 138.462%;
+  margin-bottom: 30px;
 }
 
 /*# sourceMappingURL=main.css.map */
