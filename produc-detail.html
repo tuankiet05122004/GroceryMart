@@ -30,6 +30,15 @@
         </script>
         <main class="product-page">
             <div class="container">
+                <!-- product bar -->
+                <div class="product-container">
+                    <div class="search-bar d-none d-md-flex">
+                        <input type="text" placeholder="Search for item" class="search-bar__input" />
+                        <button class="search-bar__submit">
+                            <img src="./assets/icons/search.svg" class="search-bar__icon icon" alt="" />
+                        </button>
+                    </div>
+                </div>
                 <div class="product-container">
                     <ul class="breadcrumbs">
                         <li>
@@ -222,6 +231,166 @@
                                     </div>
                                 </section>
                             </from>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-container">
+                    <div class="product-tab">
+                        <ul class="product-tab__list">
+                            <li class="product-tab__item">Description</li>
+                            <li class="product-tab__item">Features</li>
+                            <li class="product-tab__item product-tab__item--current">Review (1100)</li>
+                            <li class="product-tab__item">Similar</li>
+                        </ul>
+                        <div class="product-tab__contents">
+                            <div class="product-tab__content">content 1</div>
+                            <div class="product-tab__content">content 2</div>
+                            <div class="product-tab__content product-tab__content--current">
+                                <div class="product-content">
+                                    <h2 class="product-content__heading">What our customers are saying</h2>
+                                    <div class="row row-cols-3">
+                                        <!-- review card 1 -->
+                                        <div class="col">
+                                            <div class="review-card">
+                                                <div class="review-card__content">
+                                                    <img
+                                                        src="./assets/img/avatar/product-card-1.png"
+                                                        class="review-card__img"
+                                                        alt=""
+                                                    />
+                                                    <div class="review-card__info">
+                                                        <h4 class="review-card__title">Jakir Hussen</h4>
+                                                        <p class="review-card__desc">
+                                                            Great product, I love this Coffee Beans
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="review-card__rating">
+                                                    <img
+                                                        src="./assets/icons/Star.svg"
+                                                        alt=""
+                                                        class="review-card__star"
+                                                    />
+                                                    <img
+                                                        src="./assets/icons/Star.svg"
+                                                        alt=""
+                                                        class="review-card__star"
+                                                    />
+                                                    <img
+                                                        src="./assets/icons/Star.svg"
+                                                        alt=""
+                                                        class="review-card__star"
+                                                    />
+                                                    <img
+                                                        src="./assets/icons/star-half.svg"
+                                                        alt=""
+                                                        class="review-card__star"
+                                                    />
+                                                    <img
+                                                        src="./assets/icons/star-blank.svg"
+                                                        alt=""
+                                                        class="review-card__star"
+                                                    />
+                                                    <span class="review-card__rating-title">(3.5) Review</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- review card 2 -->
+                                        <div class="col">
+                                            <div class="review-card">
+                                                <div class="review-card__content">
+                                                    <img
+                                                        src="./assets/img/avatar/product-card-2.png"
+                                                        class="review-card__img"
+                                                        alt=""
+                                                    />
+                                                    <div class="review-card__info">
+                                                        <h4 class="review-card__title">Jubed Ahmed</h4>
+                                                        <p class="review-card__desc">
+                                                            Awesome Coffee, I love this Coffee Beans
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="review-card__rating">
+                                                    <img
+                                                        src="./assets/icons/Star.svg"
+                                                        alt=""
+                                                        class="review-card__star"
+                                                    />
+                                                    <img
+                                                        src="./assets/icons/Star.svg"
+                                                        alt=""
+                                                        class="review-card__star"
+                                                    />
+                                                    <img
+                                                        src="./assets/icons/Star.svg"
+                                                        alt=""
+                                                        class="review-card__star"
+                                                    />
+                                                    <img
+                                                        src="./assets/icons/star-half.svg"
+                                                        alt=""
+                                                        class="review-card__star"
+                                                    />
+                                                    <img
+                                                        src="./assets/icons/star-blank.svg"
+                                                        alt=""
+                                                        class="review-card__star"
+                                                    />
+                                                    <span class="review-card__rating-title">(3.5) Review</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- review card 3 -->
+                                        <div class="col">
+                                            <div class="review-card">
+                                                <div class="review-card__content">
+                                                    <img
+                                                        src="./assets/img/avatar/product-card-3.png"
+                                                        class="review-card__img"
+                                                        alt=""
+                                                    />
+                                                    <div class="review-card__info">
+                                                        <h4 class="review-card__title">Delwar Hussain</h4>
+                                                        <p class="review-card__desc">
+                                                            Great product, I like this Coffee Beans
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="review-card__rating">
+                                                    <img
+                                                        src="./assets/icons/Star.svg"
+                                                        alt=""
+                                                        class="review-card__star"
+                                                    />
+                                                    <img
+                                                        src="./assets/icons/Star.svg"
+                                                        alt=""
+                                                        class="review-card__star"
+                                                    />
+                                                    <img
+                                                        src="./assets/icons/Star.svg"
+                                                        alt=""
+                                                        class="review-card__star"
+                                                    />
+                                                    <img
+                                                        src="./assets/icons/star-half.svg"
+                                                        alt=""
+                                                        class="review-card__star"
+                                                    />
+                                                    <img
+                                                        src="./assets/icons/star-blank.svg"
+                                                        alt=""
+                                                        class="review-card__star"
+                                                    />
+                                                    <span class="review-card__rating-title">(3.5) Review</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-tab__content">content 4</div>
                         </div>
                     </div>
                 </div>

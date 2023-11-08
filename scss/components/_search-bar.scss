@@ -1,0 +1,23 @@
+.search-bar {
+    align-items: center;
+    height: 50px;
+    background-color: var(--search-bar-bg);
+    border-radius: 10px;
+    &__input {
+        flex: 1;
+        padding-left: 15px;
+        font-size: 16px;
+        font-weight: 500;
+        background-color: inherit;
+        &::placeholder {
+            font-size: 14px;
+            font-weight: 400;
+            color: #9e9da8;
+        }
+    }
+
+    &__icon {
+        height: 100%;
+        padding: 0 15px;
+    }
+}

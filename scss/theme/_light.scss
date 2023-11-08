@@ -79,8 +79,12 @@ html {
     @include abstracts.screen(md) {
         --breadcrumbs-bg: #fff;
     }
-
     // product-info
     --product-tag-bg: #ededf6;
     --product-info-content-bg: #fff;
+    // search bar
+    --search-bar-bg: #fff;
+
+    // review card
+    --review-card-bg: #fafafd;
 }
