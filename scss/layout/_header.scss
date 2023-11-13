@@ -209,8 +209,7 @@
     padding-top: 28px;
     z-index: 1;
     color: var(--cart-preview-item-color);
-
-    // display: none;
+    display: none;
 
     width: min(500px, 100vw);
     &__inner {
