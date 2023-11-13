@@ -281,6 +281,12 @@
         right: 104px;
         filter: var(--act-dropdown-filter);
     }
+    &__separate {
+        margin: 30px 0;
+        height: 1px;
+        width: 100%;
+        background-color: #ccc;
+    }
 }
 
 .cart-preview-item {

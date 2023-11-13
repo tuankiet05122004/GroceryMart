@@ -1,0 +1,136 @@
+.checkout-container {
+    margin-top: 30px;
+}
+.checkout__breadcrumbs {
+    background-color: #fff;
+}
+.cart-info {
+    padding: 0 30px;
+    border-radius: 20px;
+    background-color: var(--cart-info-bg);
+    &__right {
+        padding: 30px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__bottom {
+        margin-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    &__continue {
+        display: flex;
+        height: 100%;
+        align-items: flex-end;
+        &-link {
+            gap: 10px;
+            display: flex;
+            font-size: 1.8rem;
+            font-weight: 500;
+            line-height: 144.444%;
+        }
+    }
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+        margin-top: 10px;
+
+        &--bold {
+            font-weight: 700;
+        }
+    }
+    &__separate {
+        margin: 30px 0;
+        height: 1px;
+        background-color: #d2d1d6;
+    }
+    &__next-btn {
+        margin-top: 30px;
+        width: 100%;
+    }
+}
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 30px 0;
+    border-bottom: 1px solid #d2d1d6;
+    &__thumb {
+        width: 175px;
+        height: 172px;
+        object-fit: contain;
+    }
+    &__content {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__title {
+        max-width: 374px;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+    }
+    &__price-wrap {
+        margin: 16px 0;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+        color: #9e9da8;
+    }
+    &__status {
+        color: #67b044;
+    }
+    &__ctrl {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        min-height: 44px;
+        margin-top: auto;
+    }
+    &__input {
+        display: flex;
+        align-items: center;
+        height: 44px;
+        padding: 0 20px;
+        gap: 10px;
+        border-radius: 10px;
+        border: 1px solid #d2d1d6;
+
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 146.667%;
+
+        &-btn {
+            display: flex;
+            cursor: pointer;
+        }
+    }
+    &__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__total-price {
+        text-align: right;
+        font-size: 2.2rem;
+        font-weight: 700;
+        line-height: 145.455%;
+    }
+    &__ctrl-btn {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #9e9da8;
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 150%;
+    }
+}
