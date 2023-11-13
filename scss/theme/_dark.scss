@@ -83,4 +83,13 @@ html.dark {
 
     // review card
     --review-card-bg: #171c28;
+
+    // top-act-dropdown
+    --top-act-dopdown-inner-bg: #292e39;
+    --top-act-dopdown-shadow: rgba(23, 28, 40, 0.4);
+    --act-dropdown-filter: brightness(0) saturate(100%) invert(14%) sepia(23%) saturate(509%) hue-rotate(182deg)
+        brightness(97%) contrast(91%);
+
+    // cart-preview-item
+    --cart-preview-item-color: #b9babe;
 }
