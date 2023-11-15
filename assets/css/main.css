@@ -2295,7 +2295,7 @@ html {
   --content-width: 400px;
 }
 .modal__content {
-  padding: 30px 10px 30px 30px;
+  padding: 30px 30px 30px 30px;
   position: relative;
   z-index: 1;
   width: min(var(--content-width, 800px), 100% - 40px);
@@ -3415,6 +3415,16 @@ html {
   font-weight: 700;
   line-height: 141.667%;
 }
+.cart-info__checkbox-input {
+  appearance: none;
+  background-color: transparent;
+}
+.cart-info__checkbox-input::before {
+  content: url(../../assets/icons/uncheck.svg);
+}
+.cart-info__checkbox-input:checked::before {
+  content: url(../../assets/icons/check.svg);
+}
 
 .cart-item {
   display: flex;
@@ -3577,6 +3587,71 @@ html {
 
 .shipping__heading {
   padding-top: 30px;
+}
+
+.use-address__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.use-address__title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
+.use-address__desc {
+  margin-top: 4px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 146.667%;
+}
+.use-address__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.address-card {
+  margin-top: 30px;
+  display: flex;
+}
+.address-card__left {
+  display: flex;
+  gap: 16px;
+}
+.address-card__title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
+.address-card__desc {
+  margin-top: 4px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 146.667%;
+  width: min(520px, 90%);
+}
+.address-card__list {
+  list-style: disc inside;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  gap: 30px;
+}
+.address-card__item {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 142.857%;
+}
+.address-card__right {
+  margin-left: auto;
+  align-self: flex-end;
+}
+.address-card__edit-btn {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 144.444%;
+  display: flex;
+  gap: 10px;
 }
 
 /*# sourceMappingURL=main.css.map */

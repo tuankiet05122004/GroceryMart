@@ -82,7 +82,20 @@
         font-weight: 700;
         line-height: 141.667%;
     }
+    &__checkbox-input {
+        appearance: none;
+        background-color: transparent;
+        &::before {
+            content: url(../../assets/icons/uncheck.svg);
+        }
+        &:checked::before {
+            content: url(../../assets/icons/check.svg);
+        }
+    }
 }
+// .cart-info__checkbox-input:not(:checked)::before {
+//     filter: var(--icon-color);
+// }
 .cart-item {
     display: flex;
     align-items: flex-start;
@@ -236,5 +249,71 @@
 .shipping {
     &__heading {
         padding-top: 30px;
+    }
+}
+
+.use-address {
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__title {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+    }
+    &__desc {
+        margin-top: 4px;
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 146.667%;
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.address-card {
+    margin-top: 30px;
+    display: flex;
+    &__left {
+        display: flex;
+        gap: 16px;
+    }
+    &__title {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+    }
+    &__desc {
+        margin-top: 4px;
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 146.667%;
+        width: min(520px, 90%);
+    }
+    &__list {
+        list-style: disc inside;
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        gap: 30px;
+    }
+    &__item {
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 142.857%;
+    }
+    &__right {
+        margin-left: auto;
+        align-self: flex-end;
+    }
+    &__edit-btn {
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 144.444%;
+        display: flex;
+        gap: 10px;
     }
 }
