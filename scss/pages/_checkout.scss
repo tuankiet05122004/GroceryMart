@@ -1,15 +1,28 @@
+@use "../abstracts";
 .checkout-container {
     margin-top: 30px;
 }
 .checkout__breadcrumbs {
-    background-color: #fff;
+    background-color: var(--checkout__breadcrumbs-bg);
+}
+.checkout-page {
+    padding-bottom: 40px;
 }
 .cart-info {
     padding: 0 30px;
     border-radius: 20px;
     background-color: var(--cart-info-bg);
+    @include abstracts.screen(xl) {
+        padding: 0 16px;
+    }
     &__right {
         padding: 30px;
+        @include abstracts.screen(xl) {
+            margin-top: 30px;
+        }
+        @include abstracts.screen(md) {
+            padding: 16px;
+        }
     }
 
     &__list {
@@ -46,6 +59,11 @@
         &--bold {
             font-weight: 700;
         }
+
+        @include abstracts.screen(md) {
+            font-size: 1.6rem;
+            line-height: 150%;
+        }
     }
     &__separate {
         margin: 30px 0;
@@ -56,27 +74,56 @@
         margin-top: 30px;
         width: 100%;
     }
+    &__gift {
+        margin-top: 30px;
+    }
+    &__heading {
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 141.667%;
+    }
 }
 .cart-item {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     padding: 30px 0;
     border-bottom: 1px solid #d2d1d6;
+    @include abstracts.screen(md) {
+        gap: 16px;
+
+        &:last-child {
+            border: none;
+        }
+    }
+
     &__thumb {
         width: 175px;
         height: 172px;
         object-fit: contain;
+        @include abstracts.screen(xl) {
+            width: 60px;
+            height: 60px;
+        }
     }
     &__content {
         flex: 1;
         display: flex;
         justify-content: space-between;
+
+        @include abstracts.screen(xl) {
+            flex-direction: column;
+        }
     }
     &__title {
         max-width: 374px;
         font-size: 1.8rem;
         font-weight: 500;
         line-height: 144.444%;
+
+        @include abstracts.screen(md) {
+            font-size: 1.4rem;
+            line-height: 142.857%;
+        }
     }
     &__price-wrap {
         margin: 16px 0;
@@ -94,6 +141,13 @@
         gap: 20px;
         min-height: 44px;
         margin-top: auto;
+
+        @include abstracts.screen(md) {
+            &--md-block {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
     }
     &__input {
         display: flex;
@@ -107,6 +161,10 @@
         font-size: 1.5rem;
         font-weight: 500;
         line-height: 146.667%;
+
+        @include abstracts.screen(md) {
+            font-size: 1.4rem;
+        }
 
         &-btn {
             display: flex;
@@ -123,6 +181,16 @@
         font-size: 2.2rem;
         font-weight: 700;
         line-height: 145.455%;
+
+        @include abstracts.screen(xl) {
+            margin-top: 16px;
+            text-align: left;
+        }
+        @include abstracts.screen(md) {
+            margin-bottom: 10px;
+            font-size: 1.8rem;
+            line-height: 144.444%;
+        }
     }
     &__ctrl-btn {
         display: flex;
@@ -132,5 +200,41 @@
         font-size: 1.6rem;
         font-weight: 500;
         line-height: 150%;
+    }
+}
+.gift-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    &__wrap {
+        padding: 10px;
+        border-radius: 14px;
+        background: rgba(118, 68, 225, 0.1);
+        box-shadow: 0px 20px 60px 10px var(--gift-item-wrap-bg);
+
+        @include abstracts.screen(md) {
+            padding: 8px;
+        }
+    }
+    &__title {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+        @include abstracts.screen(md) {
+            font-size: 1.6rem;
+            line-height: 150%;
+        }
+    }
+    &__desc {
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 142.857%;
+        margin-top: 10px;
+    }
+}
+.shipping {
+    &__heading {
+        padding-top: 30px;
     }
 }

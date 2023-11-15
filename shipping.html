@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" class="dark">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -48,7 +48,13 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#!" class="breadcrumbs__link breadcrumbs__link--current"> Checkout </a>
+                            <a href="#!" class="breadcrumbs__link">
+                                Checkout
+                                <img src="./assets/icons/arrow-right.svg" alt="" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!" class="breadcrumbs__link breadcrumbs__link--current"> Shipping </a>
                         </li>
                     </ul>
                 </div>
@@ -56,6 +62,40 @@
                     <div class="row">
                         <div class="col-8 col-xl-12">
                             <div class="cart-info">
+                                <h1 class="cart-info__heading shipping__heading">
+                                    1. Shipping, arrives between Mon, May 16—Tue, May 24
+                                </h1>
+                                <div class="cart-info__separate"></div>
+                                <!-- checkout address -->
+                                <div class="use-address">
+                                    <div class="use-address__top">
+                                        <h2 class="use-address__title">Shipping address</h2>
+                                        <p class="use-address__desc">Where should we deliver your order?</p>
+                                        <button class="btn btn--primary btn--rounded .btn--small">
+                                            <img src="./assets/icons/plus.svg" alt="" />
+                                            Add a new address
+                                        </button>
+                                    </div>
+
+                                    <div class="use-address__list">
+                                        <article class="address-card__left">
+                                            <div class="address-card__choose">
+                                                <label for="" class="cart-info__checkbox">
+                                                    <input
+                                                        type="radio"
+                                                        name="shipping-adress"
+                                                        checked=""
+                                                        class="cart-info__checkbox-input"
+                                                    />
+                                                </label>
+                                            </div>
+                                            <div class="address-card__info">
+                                                <h3 class="address-card__title"></h3>
+                                                <p class="address-card__desc"></p>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
                                 <ul class="cart-info__list">
                                     <!-- cart item 1 -->
                                     <article class="cart-item">
@@ -273,7 +313,7 @@
                                     <span>Estimated Total</span>
                                     <span>$201.65</span>
                                 </div>
-                                <a href="./shipping.html" class="btn btn--primary btn--rounded cart-info__next-btn"
+                                <a href="./templates/" class="btn btn--primary btn--rounded cart-info__next-btn"
                                     >Continue to checkout</a
                                 >
                             </div>

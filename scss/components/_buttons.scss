@@ -83,4 +83,11 @@
     &:hover {
         opacity: 0.9;
     }
+    &--small {
+        height: 40px;
+    }
+    &--danger {
+        color: #fff;
+        background-color: #ed4337;
+    }
 }
