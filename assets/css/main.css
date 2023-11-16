@@ -2165,6 +2165,10 @@ html {
   border-radius: 10px;
   border: 1.5px solid #d2d1d6;
 }
+.form__text-input--textarea {
+  padding: 12px;
+  height: 100%;
+}
 .form__input {
   flex: 1;
   height: 100%;
@@ -2175,6 +2179,10 @@ html {
 }
 .form__input::placeholder {
   color: var(--placeholder-color);
+}
+.form__input-textarea {
+  resize: none;
+  height: 100%;
 }
 .form__icon {
   margin-left: 12px;
@@ -2210,6 +2218,19 @@ html {
   rotate: -45deg;
   left: 2px;
   top: 4px;
+}
+.form__row {
+  display: flex;
+  gap: 30px;
+}
+.form__row > * {
+  flex: 1;
+}
+@media (max-width: 767.98px) {
+  .form__row {
+    flex-direction: column;
+    gap: 0;
+  }
 }
 
 .message {
@@ -2322,6 +2343,11 @@ html {
 .modal.show {
   opacity: 1;
   visibility: visible;
+}
+.modal__heading {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 141.667%;
 }
 
 .top-act__btn, .top-act__group, .top-act, .navbar__link, .navbar__list, .top-bar {
@@ -3415,6 +3441,13 @@ html {
   font-weight: 700;
   line-height: 141.667%;
 }
+@media (max-width: 767.98px) {
+  .cart-info__heading {
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 150%;
+  }
+}
 .cart-info__checkbox-input {
   appearance: none;
   background-color: transparent;
@@ -3424,6 +3457,10 @@ html {
 }
 .cart-info__checkbox-input:checked::before {
   content: url(../../assets/icons/check.svg);
+}
+
+.cart-info__checkbox-input:not(:checked)::before {
+  filter: var(--icon-color);
 }
 
 .cart-item {
@@ -3594,6 +3631,12 @@ html {
   align-items: center;
   justify-content: space-between;
 }
+@media (max-width: 767.98px) {
+  .use-address__top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 .use-address__title {
   font-size: 1.8rem;
   font-weight: 500;
@@ -3605,6 +3648,13 @@ html {
   font-weight: 400;
   line-height: 146.667%;
 }
+@media (max-width: 767.98px) {
+  .use-address__desc {
+    margin-bottom: 16px;
+    font-size: 1.4rem;
+    line-height: 142.857%;
+  }
+}
 .use-address__list {
   display: flex;
   flex-direction: column;
@@ -3613,6 +3663,11 @@ html {
 .address-card {
   margin-top: 30px;
   display: flex;
+}
+@media (max-width: 767.98px) {
+  .address-card {
+    display: block;
+  }
 }
 .address-card__left {
   display: flex;
@@ -3623,12 +3678,24 @@ html {
   font-weight: 500;
   line-height: 144.444%;
 }
+@media (max-width: 767.98px) {
+  .address-card__title {
+    font-size: 1.6rem;
+    line-height: 150%;
+  }
+}
 .address-card__desc {
   margin-top: 4px;
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 146.667%;
   width: min(520px, 90%);
+}
+@media (max-width: 767.98px) {
+  .address-card__desc {
+    font-size: 1.4rem;
+    line-height: 142.857%;
+  }
 }
 .address-card__list {
   list-style: disc inside;
@@ -3652,6 +3719,11 @@ html {
   line-height: 144.444%;
   display: flex;
   gap: 10px;
+}
+@media (max-width: 767.98px) {
+  .address-card__edit-btn {
+    margin-top: 16px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

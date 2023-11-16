@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" class="dark">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -106,8 +106,11 @@
                                             </article>
                                             <article class="address-card__right">
                                                 <div class="address-card__ctrl">
-                                                    <button class="address-card__edit-btn">
-                                                        <img src="./assets/icons/edit.svg" alt="" />
+                                                    <button
+                                                        class="address-card__edit-btn js-toggle"
+                                                        toggle-target="#add-new-address"
+                                                    >
+                                                        <img src="./assets/icons/edit.svg" alt="" class="icon" />
                                                         Edit
                                                     </button>
                                                 </div>
@@ -138,8 +141,11 @@
                                             </article>
                                             <article class="address-card__right">
                                                 <div class="address-card__ctrl">
-                                                    <button class="address-card__edit-btn">
-                                                        <img src="./assets/icons/edit.svg" />Edit
+                                                    <button
+                                                        class="address-card__edit-btn js-toggle"
+                                                        toggle-target="#add-new-address"
+                                                    >
+                                                        <img src="./assets/icons/edit.svg" class="icon" />Edit
                                                     </button>
                                                 </div>
                                             </article>
@@ -369,7 +375,7 @@
                     <a href="#!" class="btn btn--outline btn--small js-toggle" toggle-target="#delete-confirm"
                         >Cancel</a
                     >
-                    <a href="#!" class="btn btn--small btn--danger js-toggle" toggle-target="#delete-confirm">Cancel</a>
+                    <a href="#!" class="btn btn--small btn--danger js-toggle" toggle-target="#delete-confirm">Delete</a>
                 </div>
             </div>
             <div class="modal__overlay js-toggle" toggle-target="#delete-confirm"></div>
@@ -413,24 +419,53 @@
                         </div>
 
                         <div class="form__group">
-                            <label for="phone" class="form__label form__label--small">Address</label>
-                            <div class="form__text-input form__text-input--small">
+                            <label for="address" class="form__label form__label--small">Address</label>
+                            <div class="form__text-input form__text-input--textarea form__text-input--small">
                                 <textarea
+                                    autofocus
                                     name="address"
                                     id="address"
                                     placeholder="Address (Area and street)"
-                                    class="form__text-area-input"
+                                    class="form__input form__input-textarea"
                                     required
                                 ></textarea>
 
                                 <img src="./assets/icons/warning.svg" alt="" class="form__icon--error" />
                             </div>
                         </div>
+
+                        <div class="form__group">
+                            <label for="city" class="form__label form__label--small">City/District/Town</label>
+                            <div class="form__text-input form__text-input--textarea form__text-input--small">
+                                <input
+                                    type="text"
+                                    name="city"
+                                    id="city"
+                                    class="form__input"
+                                    placeholder="City/District/Town "
+                                />
+
+                                <img src="./assets/icons/warning.svg" alt="" class="form__icon--error" />
+                            </div>
+                        </div>
+                        <div class="form__group form__group-inline">
+                            <label class="form__checkbox">
+                                <input type="checkbox" class="form__check-input d-none" />
+                                <span class="form__checkbox-label">Set as default address</span>
+                            </label>
+                        </div>
                     </div>
-                    <div class="modal__bottom"></div>
+                    <div class="modal__bottom">
+                        <button class="btn btn--text btn--small js-toggle" toggle-target="#add-new-address">
+                            Cancel
+                        </button>
+                        <button class="btn btn--primary btn--small js-toggle" toggle-target="#add-new-address">
+                            Create
+                        </button>
+                    </div>
                 </form>
             </div>
-            <div class="modal__overlay"></div>
+            <div class="modal__overlay js-toggle" toggle-target="#add-new-address"></div>
         </div>
         <script>
             load("#footer", "./templates/footer.html");
