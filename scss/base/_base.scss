@@ -43,7 +43,9 @@ select {
     outline: none;
     -webkit-tap-highlight-color: transparent;
 }
-
+label {
+    display: block;
+}
 .icon {
     filter: var(--icon-color);
 }

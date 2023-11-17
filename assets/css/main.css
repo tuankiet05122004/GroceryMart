@@ -178,6 +178,10 @@ select {
   -webkit-tap-highlight-color: transparent;
 }
 
+label {
+  display: block;
+}
+
 .icon {
   filter: var(--icon-color);
 }
@@ -1371,6 +1375,7 @@ html.dark {
   --cart-info-bg: #171c28;
   --gift-item-wrap-bg: rgba(23, 28, 40, 0.4);
   --checkout__breadcrumbs-bg: #171c28;
+  --payment-item-bg: #292e39;
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -1435,6 +1440,7 @@ html {
   --cart-info-bg: #fff;
   --checkout__breadcrumbs-bg: #fff;
   --gift-item-wrap-bg: rgba(237, 237, 246, 0.2);
+  --payment-item-bg: #f6f6f6;
 }
 @media (max-width: 991.98px) {
   html {
@@ -3373,6 +3379,9 @@ html {
     padding: 0 16px;
   }
 }
+.cart-info + .cart-info {
+  margin-top: 30px;
+}
 .cart-info__right {
   padding: 30px;
 }
@@ -3448,6 +3457,11 @@ html {
     line-height: 150%;
   }
 }
+.cart-info__sub-heading {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
 .cart-info__checkbox-input {
   appearance: none;
   background-color: transparent;
@@ -3458,9 +3472,29 @@ html {
 .cart-info__checkbox-input:checked::before {
   content: url(../../assets/icons/check.svg);
 }
+.cart-info__top {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.cart-info__checkbox {
+  display: flex;
+  align-items: center;
+}
+.cart-info__checkbox-label {
+  color: #9e9da8;
+  margin-right: 14px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
 
 .cart-info__checkbox-input:not(:checked)::before {
   filter: var(--icon-color);
+}
+
+.cart-info__checkbox-input:checked + .cart-info__checkbox-label {
+  color: inherit;
 }
 
 .cart-item {
@@ -3724,6 +3758,44 @@ html {
   .address-card__edit-btn {
     margin-top: 16px;
   }
+}
+
+.pay-item {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  background-color: var(--payment-item-bg);
+  border-radius: 20px;
+  margin-top: 30px;
+}
+.pay-item__title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
+.pay-item__desc {
+  margin-top: 4px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 146.667%;
+}
+.pay-item__detail {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 146.667%;
+  color: dodgerblue;
+  margin-left: auto;
+}
+.pay-item__info {
+  margin-left: 20px;
+  margin-right: auto;
+}
+.pay-info {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.pay-info__checkbox {
+  flex-direction: row-reverse;
 }
 
 /*# sourceMappingURL=main.css.map */
