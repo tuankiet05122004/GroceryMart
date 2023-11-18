@@ -424,9 +424,42 @@
     &-info {
         padding-top: 30px;
         padding-bottom: 30px;
+        @include abstracts.screen(xl) {
+            margin-top: 20px;
+        }
+        @include abstracts.screen(md) {
+            margin-top: 0;
+        }
 
         &__checkbox {
             flex-direction: row-reverse;
+        }
+    }
+}
+.favorite {
+    &__heading {
+        padding-top: 30px;
+    }
+    &__desc {
+        margin-bottom: 30px;
+    }
+    &__btn {
+        @include abstracts.screen(xl) {
+            margin-top: 20px;
+        }
+        @include abstracts.screen(md) {
+            margin-top: 0px;
+        }
+    }
+    &__btn-bottom {
+        margin-left: auto;
+        @include abstracts.screen(md) {
+            margin-top: 16px;
+        }
+    }
+    &__bottom {
+        @include abstracts.screen(md) {
+            flex-direction: column;
         }
     }
 }

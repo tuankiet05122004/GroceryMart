@@ -1870,6 +1870,11 @@ html {
   font-weight: 500;
   user-select: none;
 }
+@media (max-width: 767.98px) {
+  .btn {
+    font-size: 1.6rem;
+  }
+}
 .btn--text {
   background-color: transparent;
   color: #9e9da8;
@@ -3816,8 +3821,48 @@ html {
   padding-top: 30px;
   padding-bottom: 30px;
 }
+@media (max-width: 1199.98px) {
+  .pay-info {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 767.98px) {
+  .pay-info {
+    margin-top: 0;
+  }
+}
 .pay-info__checkbox {
   flex-direction: row-reverse;
+}
+
+.favorite__heading {
+  padding-top: 30px;
+}
+.favorite__desc {
+  margin-bottom: 30px;
+}
+@media (max-width: 1199.98px) {
+  .favorite__btn {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 767.98px) {
+  .favorite__btn {
+    margin-top: 0px;
+  }
+}
+.favorite__btn-bottom {
+  margin-left: auto;
+}
+@media (max-width: 767.98px) {
+  .favorite__btn-bottom {
+    margin-top: 16px;
+  }
+}
+@media (max-width: 767.98px) {
+  .favorite__bottom {
+    flex-direction: column;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

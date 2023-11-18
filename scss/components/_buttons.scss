@@ -1,3 +1,4 @@
+@use "../abstracts";
 // filter btn
 .filter-btn {
     display: flex;
@@ -51,6 +52,9 @@
     font-size: 1.8rem;
     font-weight: 500;
     user-select: none;
+    @include abstracts.screen(md) {
+        font-size: 1.6rem;
+    }
 
     &--text {
         background-color: transparent;
