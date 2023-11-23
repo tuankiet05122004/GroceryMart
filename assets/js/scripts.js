@@ -191,3 +191,18 @@ window.addEventListener("template-loaded", () => {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const theme = document.getElementById("theme");
+    var select = document.getElementById("chooseTheme");
+    var chooseTheme = select.options[select.selectedIndex].value;
+    select.addEventListener("change", function () {
+        chooseTheme = select.options[select.selectedIndex].value;
+        console.log(theme.selected);
+        if (chooseTheme === "light") {
+            theme.classList.remove("dark");
+        } else {
+            theme.classList.add("dark");
+        }
+    });
+});
